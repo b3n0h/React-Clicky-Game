@@ -14,10 +14,8 @@ class App extends Component {
   }
 
   onSelect = id => {
-    console.log(id)
     if (this.state.alreadySelected.indexOf(id) === -1) {
       this.state.alreadySelected.push(id)
-      console.log(this.state.alreadySelected)
       this.setState({score: this.state.score + 1})
       this.state.score >= this.state.highScore ? this.setState({highScore: this.state.highScore + 1}) : this.setState({highScore: this.state.highScore})
     } else {
