@@ -1,11 +1,12 @@
 .media {
-  height: 200px;
+  height: 150px;
   object-fit: contain;
 }
 
 .card {
-  max-width: 300px;
+  max-width: 200px;
   margin-bottom: 20px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
