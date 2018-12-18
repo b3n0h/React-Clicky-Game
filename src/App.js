@@ -15,14 +15,20 @@ class App extends Component {
 
   onSelect = id => {
     console.log(id)
-    this.state.alreadySelected.push(id)
-    console.log(this.state.alreadySelected)
+    if (this.state.alreadySelected.indexOf(id) === -1) {
+      this.state.alreadySelected.push(id)
+      console.log(this.state.alreadySelected)
+      this.setState({score: this.state.score + 1})
+    }
   }
 
   render() {
     return (
       <>
-        <Nav />
+        <Nav 
+        score={this.state.score}
+        highScore={this.state.highScore}
+        />
         <Grid container spacing={16}>
           {this.state.pokemon.map(p =>
             <Content
