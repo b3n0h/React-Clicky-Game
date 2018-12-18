@@ -1,0 +1,11 @@
+.media {
+  height: 200px;
+  object-fit: contain;
+}
+
+.card {
+  max-width: 300px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
