@@ -23,7 +23,7 @@ function Nav(props) {
           <Typography variant="h6" color="inherit" className={classes.grow}>
             Pokemon Clicky Game
           </Typography>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
+          <Typography align="right" variant="h6" color="inherit" className={classes.grow}>
             Current Score: {props.score} | High Score: {props.highScore}
           </Typography>
         </Toolbar>
