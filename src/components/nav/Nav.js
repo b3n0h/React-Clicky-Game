@@ -1,34 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import pokemon from '../../images/pokemon.png'
+import './Nav.css'
 
 const styles = {
-  root: {
-    flexGrow: 1,
+  logo: {
+    height: 150,
   },
-  grow: {
-    flexGrow: 1,
+  nav: {
+    backgroundColor: 'red',
   }
 }
 
 function Nav(props) {
+
   const { classes } = props;
+
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            Pokemon Clicky Game
-          </Typography>
-          <Typography align="right" variant="h6" color="inherit" className={classes.grow}>
-            Current Score: {props.score} | High Score: {props.highScore}
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <Grid container alignItems='center' justify='center' className={classes.nav} id='nav'>
+      <Grid item>
+        Pokemon Clicky Game
+      </Grid>
+      <Grid item>
+        <img src={pokemon} alt="pokemon logo" className={classes.logo} />
+      </Grid>
+      <Grid item>
+        Current Score: {props.score} | High Score: {props.highScore}
+      </Grid>
+    </Grid>  
   );
 }
 

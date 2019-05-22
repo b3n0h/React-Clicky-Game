@@ -3,6 +3,7 @@ import Nav from './components/nav'
 import Content from './components/content'
 import pokemon from './pokemon.json'
 import Grid from '@material-ui/core/Grid';
+import './App.css'
 
 class App extends Component {
 
@@ -33,7 +34,7 @@ class App extends Component {
         score={this.state.score}
         highScore={this.state.highScore}
         />
-        <Grid container spacing={16}>
+        <Grid container className='quiz'>
           {this.state.pokemon.map(p =>
             <Content
               onSelect={this.onSelect}

@@ -7,20 +7,20 @@ import './Content.css'
 import Grid from '@material-ui/core/Grid';
 
 const Content = props => (
-  <Grid item xs={4}>
-    <Card onClick={() => props.onSelect(props.id)}
-      className="card" >
-      <CardActionArea>
-        <CardContent>
-          <CardMedia
-            className="media"
-            image={props.image}
-            title={props.name}
-          />
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  </Grid>
+    <Grid item xs={4}>
+      <Card onClick={() => props.onSelect(props.id)}
+        className="card" >
+        <CardActionArea>
+          <CardContent>
+            <CardMedia
+              className="media"
+              image={props.image}
+              title={props.name}
+            />
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Grid>
 )
 
 export default Content
