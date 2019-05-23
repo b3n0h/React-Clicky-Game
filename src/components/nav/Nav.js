@@ -8,9 +8,15 @@ import './Nav.css'
 const styles = {
   logo: {
     height: 150,
+    paddingBottom: 15,
   },
   nav: {
     backgroundColor: 'red',
+    padding: 30,
+  },
+  title: {
+    fontSize: 20,
+    paddingBottom: 20,
   }
 }
 
@@ -19,14 +25,14 @@ function Nav(props) {
   const { classes } = props;
 
   return (
-    <Grid container alignItems='center' justify='center' className={classes.nav} id='nav'>
-      <Grid item>
+    <Grid container align='center' justify='center' className={classes.nav} id='nav'>
+      <Grid item xs={12} className={classes.title}>
         Pokemon Clicky Game
       </Grid>
-      <Grid item>
+      <Grid item xs={12}>
         <img src={pokemon} alt="pokemon logo" className={classes.logo} />
       </Grid>
-      <Grid item>
+      <Grid item xs={12}>
         Current Score: {props.score} | High Score: {props.highScore}
       </Grid>
     </Grid>  
